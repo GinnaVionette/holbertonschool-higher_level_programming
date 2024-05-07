@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-str = "Python is an interpreted, interactive, object-oriented programming\
- language that combines remarkable power with very clear syntax"
-print(str[str.find("object-oriented programming"):].split()[0])
+print("object-oriented programming" if "object-oriented programming" in "Python is an interpreted, interactive, object-oriented programming language that combines remarkable power with very clear syntax" else "")
 
