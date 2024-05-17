@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""Square Class
-
-This class don't do anything for the moment
-
-"""
+# 0-square.py
+"""Define a new class: """
 
 
-class Square:
+class Square(object):
+    """A simple example class"""
     pass
