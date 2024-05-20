@@ -1,0 +1,74 @@
+===========================
+How to Use 3-say_my_name.py
+===========================
+
+This module defines a function to print a formatted name: ``say_my_name(first_name, last_name="")``.
+
+Usage
+=====
+
+``say_my_name(...)`` prints the provided first and last names in a formatted string. Both parameters must be strings.
+
+Examples
+--------
+
+Importing the function:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Basic usage with both names:
+
+    >>> say_my_name("John", "Doe")
+    My name is John Doe
+
+    >>> say_my_name("Jane", "Smith")
+    My name is Jane Smith
+
+Using only the first name (last name is optional):
+
+    >>> say_my_name("Alice")
+    My name is Alice 
+
+Handling names with special characters:
+
+    >>> say_my_name("John", "O'Connor")
+    My name is John O'Connor
+
+    >>> say_my_name("Marie", "Curie-Skłodowska")
+    My name is Marie Curie-Skłodowska
+
+Handling names with leading/trailing spaces:
+
+    >>> say_my_name("  John", "Doe  ")
+    My name is   John Doe  
+
+Error Handling
+==============
+
+The function does not accept non-string data for the first name:
+
+    >>> say_my_name(123, "Doe")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+The function does not accept non-string data for the last name:
+
+    >>> say_my_name("John", 456)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+The function requires at least the first name parameter to be a string:
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+If both parameters are neither strings:
+
+    >>> say_my_name(123, 456)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
