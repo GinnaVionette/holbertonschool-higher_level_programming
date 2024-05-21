@@ -1,0 +1,84 @@
+===========================
+How to Use text_indentation.py
+===========================
+
+This module defines a function to print text with indentation: ``text_indentation(text)``.
+
+Usage
+=====
+
+``text_indentation(...)`` prints the given text with 2 new lines after each of the characters: `.` `?` and `:`. The text parameter must be a string.
+
+Examples
+--------
+
+Importing the function:
+
+    >>> text_indentation = __import__('text_indentation').text_indentation
+
+Basic usage:
+
+    >>> text_indentation("Hello. How are you? I hope you're doing well: Stay safe.")
+    Hello.
+
+    How are you?
+
+    I hope you're doing well:
+
+    Stay safe.
+
+Handling text with leading and trailing spaces:
+
+    >>> text_indentation("  Hello.  How are you? I hope you're doing well: Stay safe.  ")
+    Hello.
+
+    How are you?
+
+    I hope you're doing well:
+
+    Stay safe.
+
+Handling text without special characters:
+
+    >>> text_indentation("Hello How are you I hope you're doing well Stay safe")
+    Hello How are you I hope you're doing well Stay safe
+
+Handling text with consecutive special characters:
+
+    >>> text_indentation("Hello... How are you?? I hope you're doing well:: Stay safe.")
+    Hello.
+
+    .
+
+    .
+
+    How are you?
+
+    ?
+
+    I hope you're doing well:
+
+    :
+
+    Stay safe.
+
+Error Handling
+==============
+
+The function does not accept non-string data:
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+The function does not accept None as input:
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+The function does not accept empty string (prints nothing):
+
+    >>> text_indentation("")
