@@ -1,1 +1,0 @@
-This is the README file for the Holberton Exercise "Python - More Classes and Objects."
