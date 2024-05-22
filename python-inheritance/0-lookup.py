@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-def lookup(obj):
-    """
-    Returns the list of available attributes and methods of an object
-    """
+# 0-lookup.py
+""" File name : 0-lookup.py
+    It is not allowed to import any module
+"""
 
+
+def lookup(obj):
+    """ A list object"""
     return dir(obj)
