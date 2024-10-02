@@ -1,6 +1,17 @@
 #!/usr/bin/python3
-def write_file(filename="", text=""):
-    """ function that writes a string to a text file (UTF8)  """
+"""Function that writes a string to a text file"""
 
-    with open(filename, "w", encoding='utf-8') as f:
-        return f.write(text)
+
+def write_file(filename="", text=""):
+    """This function that writes a string
+    to a text file and returns the number of characters
+    written"""
+
+    n_characters = 0
+
+    with open(filename, mode="w", encoding="utf-8") as f:
+        f.write(text)
+
+    n_characters = len(text)
+
+    return n_characters

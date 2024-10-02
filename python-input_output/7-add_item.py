@@ -1,20 +1,24 @@
 #!/usr/bin/python3
-"""Module for saving to json"""
-import json
-import os.path
-import sys
+"""Load, add, save"""
+
+
 from sys import argv
+from os.path import exists
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
-filename = "add_item.json"
-json_list = []
+namefile = "add_item.json"
+argc = len(argv)
 
-if os.path.exists(filename):
-    json_list = load_from_json_file(filename)
+new_list = []
 
-for index in argv[1:]:
-    json_list.append(index)
+if exists(namefile):
+    new_list = load_from_json_file(namefile)
 
-save_to_json_file(json_list, filename)
+if (argc == 1):
+    save_to_json_file([], namefile)
+else:
+    for i in range(1, argc):
+        new_list.append(argv[i])
+    save_to_json_file(new_list, namefile)
