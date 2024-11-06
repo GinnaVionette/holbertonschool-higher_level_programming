@@ -1,0 +1,1 @@
+Template folder for Holberton School Project Python - Server-Side Rendering."
