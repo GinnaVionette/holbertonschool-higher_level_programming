@@ -1,0 +1,1 @@
+README for Holberton School "Python - Everything is object" Exercise.
